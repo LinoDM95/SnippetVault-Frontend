@@ -21,7 +21,7 @@ const Login = () => {
       handleLogin(event);
     }
   };
-
+  const token = sessionStorage.getItem("access");
   const handleLogin = async (event) => {
     event.preventDefault();
 
@@ -30,6 +30,7 @@ const Login = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`,
         },
         body: JSON.stringify({
           username: usernameValue,

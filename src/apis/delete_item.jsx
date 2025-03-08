@@ -8,16 +8,19 @@ const API_URL = isDevelopment
 /**
  * ! deleteItem
  * ! IMPORTANT!
- * ! This API deletes an item using the ID in the API URL. 
+ * ! This API deletes an item using the ID in the API URL.
  * ! If you need to use a different method, such as JSON, you will need to implement it here.
- * 
- * 
+ *
+ *
  */
-
+const token = sessionStorage.getItem("access");
 export const deleteItem = async (id) => {
   try {
     const response = await fetchWithAuth(`${API_URL}/delete-item/${id}/`, {
       method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
     });
 
     if (!response.ok) {
