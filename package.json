@@ -7,7 +7,7 @@
     "test": "vitest --run",
     "lint": "eslint . --fix",
     "dev": "vite",
-    "build": "tsc -b && vite build --mode production",
+    "build": "tsc -b && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
