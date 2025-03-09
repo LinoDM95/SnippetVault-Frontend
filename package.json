@@ -8,6 +8,7 @@
     "lint": "eslint . --fix",
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "postbuild": "cp static.json dist/",
     "preview": "vite preview"
   },
   "dependencies": {
