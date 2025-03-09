@@ -18,11 +18,6 @@ import { useContext } from "react";
 
 
 
-/**
- *
- * TODO: DOCU
- */
-
 const AppLayout = () => {
   const location = useLocation();
   const { user, loading } = useContext(AuthContext);
@@ -34,7 +29,7 @@ const AppLayout = () => {
     return <p style={{ textAlign: "center", marginTop: "20px" }}>...</p>;
   }
  
-  
+
   return (
     <div className="h-screen flex flex-col">
       {!hideHeader && (
