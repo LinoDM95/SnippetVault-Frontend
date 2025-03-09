@@ -33,7 +33,8 @@ const AppLayout = () => {
   if (loading) {
     return <p style={{ textAlign: "center", marginTop: "20px" }}>...</p>;
   }
-
+ 
+  
   return (
     <div className="h-screen flex flex-col">
       {!hideHeader && (
