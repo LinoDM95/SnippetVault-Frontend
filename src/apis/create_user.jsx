@@ -4,6 +4,7 @@ const API_URL = isDevelopment
   : import.meta.env.VITE_API_BASE_URL_DEPLOY;
 export const createUser = async (registerData) => {
   try {
+    console.log("api-url", API_URL)
     const response = await fetch(`${API_URL}/create-user/`, {  
       method: "POST",
       headers: {
