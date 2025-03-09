@@ -25,6 +25,7 @@ const Login = () => {
     event.preventDefault();
 
     try {
+      console.log(import.meta.env)
       const response = await fetch(`${API_URL}/api/token/`, {
         method: "POST",
         headers: {
