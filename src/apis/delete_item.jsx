@@ -13,13 +13,12 @@ const API_URL = isDevelopment
  *
  *
  */
-const token = sessionStorage.getItem("access");
+
 export const deleteItem = async (id) => {
   try {
     const response = await fetchWithAuth(`${API_URL}/delete-item/${id}/`, {
       method: "DELETE",
       headers: {
-        Authorization: `Bearer ${token}`,
       },
     });
 
